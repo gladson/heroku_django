@@ -1,52 +1,51 @@
-heroku_django
-=============
+## heroku_django ##
 
-I. Instale o Heroku Toolbelt:
+    1. Instale o Heroku Toolbelt:
 
-wget -qO- https://toolbelt.heroku.com/install.sh | sh
+        wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
-II. Faça o login:
+    2. Faça o login:
 
-$ heroku login
-Enter your Heroku credentials.
-Email: gladson@agronomo.eng.br
-Password (typing will be hidden): 123456789
-Found existing public key: /home/casa/.ssh/id_rsa.pub
-Uploading SSH public key /home/casa/.ssh/id_rsa.pub... done
-Authentication successful.
+        $ heroku login
+            Enter your Heroku credentials.
+            Email: gladson@immensa.com.br
+            Password (typing will be hidden): 123456789
+            Found existing public key: /home/casa/.ssh/id_rsa.pub
+            Uploading SSH public key /home/casa/.ssh/id_rsa.pub... done
+            Authentication successful.
 
-III. faça o virtualenv:
+    3. faça o virtualenv:
 
-$ virtualenv --no-site-packages env
-New python executable in env/bin/python
-Installing setuptools............done.
-Installing pip...............done.
+        $ virtualenv --no-site-packages env
+            New python executable in env/bin/python
+            Installing setuptools............done.
+            Installing pip...............done.
 
-IV. Ative o virtualenv:
+    4. Ative o virtualenv:
 
-$ source env/bin/activate
+        $ source env/bin/activate
 
-V. Instale os pacotes no virtualenv:
+    5. Instale os pacotes no virtualenv:
 
-$ pip install -r requirements.txt
+        $ pip install -r requirements.txt
 
-Obs.: Caso de problema na instalação:
-$ sudo apt-get install libpq-dev python-dev
+    Obs.: Caso de problema na instalação:
+    $ sudo apt-get install libpq-dev python-dev
 
-VI. Teste se tudo, Ok?
+    6. Teste se tudo, Ok?
 
-$ ./manage.py runserver localhost:8000
+        $ ./manage.py runserver localhost:8000
 
-VII. Crie uma app no Heroku:
+    7. Crie uma app no Heroku:
 
-$ heroku create sua-app-django
+        $ heroku create sua-app-django
 
-VIII. Envie a sua app:
+    8. Envie a sua app:
 
-$ git push heroku master
+        $ git push heroku master
 
-IX. Sincronizar banco de dados:
+    9. Sincronizar banco de dados:
 
-$ heroku run python manage.py syncdb
+        $ heroku run python manage.py syncdb
 
-$ heroku run python manage.py collectstatic
+        $ heroku run python manage.py collectstatic
